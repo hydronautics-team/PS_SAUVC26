@@ -23,7 +23,7 @@ DefaultPcbPcad=0
 ReorderDocumentsOnCompile=1
 NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
-AutoSheetNumbering=1
+AutoSheetNumbering=0
 AutoCrossReferences=1
 NewIndexingOfSheetSymbols=1
 PushECOToAnnotationFile=1
@@ -44,10 +44,16 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
+CurrentVariant=01
 
 [Preferences]
 PrefsVaultGUID=
 PrefsRevisionGUID=
+
+[Release]
+ReleaseTarget=1
+ReleaseFolderPath=[OutputPath]
+ReleaseZipPath=[OutputPath][ProjectName].zip
 
 [Document1]
 DocumentPath=Shema.SchDoc
@@ -168,29 +174,43 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[ProjectVariant1]
+UniqueId=0cd63fb9-cf7d-40a1-8afb-6957f0ffec98
+Description=01
+AllowFabrication=0
+ParameterCount=0
+VariationCount=2
+Variation1=Designator=SB1|UniqueId=\NMMQOJXT|Kind=1|AlternatePart=
+Variation2=Designator=SB2|UniqueId=\EKAMABQR|Kind=1|AlternatePart=
+ParamVariationCount=0
+
 [Parameter1]
-Name=Title
-Value=
+Name=Version
+Value=01
 
 [Parameter2]
-Name=Release_Date
-Value=
+Name=Title
+Value=Плата обработки датчика давления
 
 [Parameter3]
-Name=DrawnBy
-Value=
+Name=Release_Date
+Value=29.07.2025
 
 [Parameter4]
-Name=Decimal_Number_Shematic
-Value=
+Name=DrawnBy
+Value=Артемьев. Н
 
 [Parameter5]
-Name=Decimal_Number_PCB
-Value=
+Name=Decimal_Number_Shematic
+Value=ГИДР.123456.009
 
 [Parameter6]
+Name=Decimal_Number_PCB
+Value=ГИДР.123456.008
+
+[Parameter7]
 Name=CheckedBy
-Value=
+Value=Карманов С.
 
 [Configuration1]
 Name=Sources
@@ -201,6 +221,41 @@ Variant=[No Variations]
 OutputJobsCount=0
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
+
+[Configuration2]
+Name=Fabrication
+ParameterCount=0
+ConstraintFileCount=0
+ReleaseItemId=
+Variant=[No Variations]
+OutputJobsCount=0
+ContentTypeGUID=0C520D2A-E60C-11DF-B822-12313F0024A2
+ConfigurationType=Fabrication
+
+[Configuration3]
+Name=Assembly 01
+ParameterCount=0
+ConstraintFileCount=0
+ReleaseItemId=
+Variant=01
+OutputJobsCount=1
+DocumentReferenceClass1=DocumentReference
+OutputJobFileName1=HydroJob.OutJob
+ContentTypeGUID=0D12F8DC-E60C-11DF-B822-12313F0024A2
+ConfigurationType=Assembly
+LocalReleaseTarget=ГИДР.123456.008-01.01
+
+[Configuration4]
+Name=Assembly
+ParameterCount=0
+ConstraintFileCount=0
+ReleaseItemId=
+Variant=[No Variations]
+OutputJobsCount=1
+DocumentReferenceClass1=DocumentReference
+OutputJobFileName1=HydroJob.OutJob
+ContentTypeGUID=0D12F8DC-E60C-11DF-B822-12313F0024A2
+ConfigurationType=Assembly
 
 [OutputGroup1]
 Name=Netlist Outputs
